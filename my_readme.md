@@ -1,7 +1,7 @@
 # 本地安装运行PaddleOCR
 ## 软件准备工作
 1. 下载Pycharm，Python3.7，git
-2. 根据https://github.com/PaddlePaddle/PaddleOCR/blob/develop/doc/doc_ch/installation.md指示逐步完成环境配置，主要是用git clone PaddleOCR项目，以及pip所需要的安装包
+2. 根据https://github.com/PaddlePaddle/PaddleOCR/blob/develop/doc/doc_ch/installation.md 指示逐步完成环境配置，主要是用git clone PaddleOCR项目，以及pip所需要的安装包
 3. 下载所需的模型，det检测，cls方向分类，rec识别
 ## 出现的问题及解决
 1. PaddleOCR对Python版本有严格要求，确保下载3.7及以下，否则出现会找不到模块的报错
