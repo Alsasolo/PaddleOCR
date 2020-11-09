@@ -11,3 +11,8 @@
 3. 用命令行执行predict_system.py,并给定图片，模型路径，可能出现character.py程序中，字典路径的报错，需要把报错路径加转义字符r，对于不同的语言，要切换字典，切换rec模型。
    有支持中英文识别的模型。其他语种的模型只能单独识别该语种，有Germany，Japan，French，Korean。
 4. 韩语识别效果极差。
+## 程序语句示例
+1. python D:\ocr\pic\PaddleOCR\tools\infer\predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer/"  --rec_model_dir="./inference/ch_ppocr_mobile_v1.1_rec_infer/" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer/" --use_angle_cls=True --use_space_char=True --use_gpu=False
+2. #character_dict_path = config['character_dict_path']
+   character_dict_path = r"D:\PaddleOCR\ppocr\utils\dict\korean_dict.txt"
+3. pip install/uninstall/list   
