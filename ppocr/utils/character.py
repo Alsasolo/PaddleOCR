@@ -38,7 +38,8 @@ class CharacterOps(object):
         elif self.character_type in [
                 "ch", 'japan', 'korean', 'french', 'german'
         ]:
-            character_dict_path = config['character_dict_path']
+            #character_dict_path = config['character_dict_path']
+            character_dict_path = r"dict_path"
             add_space = False
             if 'use_space_char' in config:
                 add_space = config['use_space_char']
