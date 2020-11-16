@@ -36,7 +36,7 @@ v = s.split('=')[0]
 with open(out_label, 'w', encoding='UTF-8') as out_file:
 2. #with open(os.path.join(input_dir, label_file), 'r') as f:
 with open(os.path.join(input_dir, label_file), 'r', encoding='UTF-8-sig') as f:
-3. # ./pretrain_models/MobileNetV3_large_x0_5_pretrained/
+3. #./pretrain_models/MobileNetV3_large_x0_5_pretrained/
 pretrain_weights: D:\PaddleOCR\pretrain_models\MobileNetV3_large_x0_5_pretrained\
 4. python "D:\PaddleOCR\train_data\gen_label.py" --mode="det" --root_path="icdar_c4_train_imgs/"    --input_path="D:\PaddleOCR\train_data\icdar2015\text_localization\ch4_training_localization_transcription_gt"     --output_label="D:\PaddleOCR\train_data\icdar2015\text_localization\train_icdar2015_label.txt"
 5. python "D:\PaddleOCR\tools\train.py" -c "D:\PaddleOCR\configs\det\det_mv3_db_v1.1.yml"    2>&1|"C:\Program Files\Git\usr\bin\tee.exe" train_det.log
