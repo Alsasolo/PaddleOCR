@@ -3,4 +3,6 @@
 ## 本地文件上传到远程服务器
 1. python，paddleOCR文件上传。
 2. paddlepaddle-gpu使用pip下载。
+3. pip 所有requirements.text 里的安装包。
 ## 服务器端运行
+1. python ./PaddleOCR/tools/infer/predict_system.py 
