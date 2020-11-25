@@ -4,5 +4,16 @@
 1. python，paddleOCR文件上传。
 2. paddlepaddle-gpu使用pip下载。
 3. pip 所有requirements.text 里的安装包。
+   python3 -m pip
+   pip install ./PaddleOCR/requirments.txt
 ## 服务器端运行
-1. python ./PaddleOCR/tools/infer/predict_system.py 
+### 出现的问题及解决
+1. 有无数个pip，无数个python，版本又是问题，安装包是问题。坚持用python3
+### 程序语句
+1. python ./PaddleOCR/tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer/" --rec_model_dir="./inference/ch_ppocr_mobile_v1.1_rec_infer/" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer/" --use_angle_cls=True --use_space_char=True --use_gpu=true
+ 
+
+ERROR: Package 'imageio' requires a different Python: 2.7.12 not in '>=3.5'
+python3 -m pip install ./PaddleOCR/requirments.txt
+python -m pip install -r ./requirments.txt
+python ./tools/train.py -c "D:\PaddleOCR\configs\det\det_mv3_db_v1.1.yml"
