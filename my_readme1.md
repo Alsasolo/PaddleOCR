@@ -11,6 +11,7 @@
 1. 有无数个pip，无数个python，版本又是问题，安装包是问题。必须在服务器端部署python3.7，不能简单本地上传。
    严格安装步骤来部署python3.7，https://blog.csdn.net/hero_myself/article/details/90213476 ，
    make install DESTDIR=/home/xiaocuiping/Python3
+2. 安装anaconda3， https://www.jianshu.com/p/e298b9d3afae ，
     wget https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/srpms/SRPMS.pclos/libffi-3.2.1-2pclos2019.src.rpm
     https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
   
