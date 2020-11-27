@@ -22,4 +22,7 @@
 ERROR: Package 'imageio' requires a different Python: 2.7.12 not in '>=3.5'
 python3 -m pip install ./PaddleOCR/requirments.txt
 python -m pip install -r ./requirments.txt
-python ./tools/train.py -c "D:\PaddleOCR\configs\det\det_mv3_db_v1.1.yml"
+python3 ./tools/train.py -c "D:\PaddleOCR\configs\det\det_mv3_db_v1.1.yml"
+
+/Projects/PaddleOCR
+python3 -V
