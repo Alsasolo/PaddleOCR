@@ -18,7 +18,8 @@
 3. python3.7依然是问题，anaconda的python版本会升级成3.9。所以conda不能随便用。有了conda之后，python，python3都是3.7，pip要用python -m pip要才能对应到3.7的python。
    python -m pip install -r ./requirments.txt
    python -m pip install paddlepaddle-gpu
-4. 
+4. 安装包时依旧会错，numpy版本，不过应该能解决，毕竟有经验。
+   Could not find a version that satisfies the requirement numpy==1.13.3
 
     wget https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/srpms/SRPMS.pclos/libffi-3.2.1-2pclos2019.src.rpm
     https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
