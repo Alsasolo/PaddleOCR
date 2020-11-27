@@ -12,6 +12,10 @@
    严格安装步骤来部署python3.7，https://blog.csdn.net/hero_myself/article/details/90213476 ，
    make install DESTDIR=/home/xiaocuiping/Python3
 2. 安装anaconda3， https://www.jianshu.com/p/e298b9d3afae ，
+   wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh
+   bash /home/xiaocuiping/Anaconda3-5.3.1-Linux-x86_64.sh
+3. python3.7依然是问题，anaconda的python版本是3.8
+
     wget https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/srpms/SRPMS.pclos/libffi-3.2.1-2pclos2019.src.rpm
     https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
   
