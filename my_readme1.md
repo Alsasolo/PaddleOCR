@@ -10,8 +10,9 @@
 ### 出现的问题及解决
 1. 有无数个pip，无数个python，版本又是问题，安装包是问题。必须在服务器端部署python3.7，不能简单本地上传。
    严格安装步骤来部署python3.7，https://blog.csdn.net/hero_myself/article/details/90213476 ，
-   make install DESTDIR= /home/xiaocuiping/Python3
-    wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-19.el7.x86_64.rpm
+   make install DESTDIR=/home/xiaocuiping/Python3
+    wget https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/srpms/SRPMS.pclos/libffi-3.2.1-2pclos2019.src.rpm
+    https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
   
 ### 程序语句
 1. python ./PaddleOCR/tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer/" --rec_model_dir="./inference/ch_ppocr_mobile_v1.1_rec_infer/" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer/" --use_angle_cls=True --use_space_char=True --use_gpu=true
