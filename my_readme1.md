@@ -11,11 +11,13 @@
 1. 有无数个pip，无数个python，版本又是问题，安装包是问题。必须在服务器端部署python3.7，不能简单本地上传。
    严格安装步骤来部署python3.7，https://blog.csdn.net/hero_myself/article/details/90213476 ，
    make install DESTDIR=/home/xiaocuiping/Python3
+   但该方法还是失败了，死在libffi devel上。
 2. 安装anaconda3， https://www.jianshu.com/p/e298b9d3afae ，
    wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh
    bash /home/xiaocuiping/Anaconda3-5.3.1-Linux-x86_64.sh
-3. python3.7依然是问题，anaconda的python版本是3.8
-
+3. python3.7依然是问题，anaconda的python版本会升级成3.9。所以conda不能随便用。
+   python -m pip install -r ./requirments.txt
+4. 
     wget https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/srpms/SRPMS.pclos/libffi-3.2.1-2pclos2019.src.rpm
     https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
   
@@ -26,7 +28,11 @@
 ERROR: Package 'imageio' requires a different Python: 2.7.12 not in '>=3.5'
 python3 -m pip install ./PaddleOCR/requirments.txt
 python -m pip install -r ./requirments.txt
-python3 ./tools/train.py -c "D:\PaddleOCR\configs\det\det_mv3_db_v1.1.yml"
+
+python ./tools/train.py -c "D:\PaddleOCR\configs\det\det_mv3_db_v1.1.yml"
+No module named 'cv2'
 
 /Projects/PaddleOCR
-python3 -V
+ python -V
+ pip -V
+ python -m pip -V install upgrade pip
