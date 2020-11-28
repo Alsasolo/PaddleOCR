@@ -19,13 +19,16 @@
    python -m pip install -r ./requirments.txt
    python -m pip install paddlepaddle-gpu
 4. 安装包时依旧会错，numpy版本，不过应该能解决，毕竟有经验。
-   Could not find a version that satisfies the requirement numpy==1.13.3
+5. ExternalError:  Cudnn error, CUDNN_STATUS_BAD_PARAM  at (/paddle/paddle/fluid/operators/batch_norm_op.cu:198)
+  [operator < batch_norm > error]
+  运行该句就能解决 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBARAY_PATH
+   
 
     wget https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/srpms/SRPMS.pclos/libffi-3.2.1-2pclos2019.src.rpm
     https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
   
 ### 程序语句
-1. python ./tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="./inference/ch_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true false
+1. python ./tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="./inference/ch_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true 
  
 ERROR: Package 'imageio' requires a different Python: 2.7.12 not in '>=3.5'
 python -m pip install -r ./requirments.txt
