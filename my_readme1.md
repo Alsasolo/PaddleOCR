@@ -26,6 +26,9 @@
 1. 多语言时，要更换rec模型，更换字典。
   "ch", 'japan', 'korean', 'french', 'german'
    "/home/xiaocuiping/Projects/PaddleOCR/ppocr/utils/dict/korean_dict.txt"
+2. 需要进入conda环境
+   conda activate base
+3.  
 
     wget https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/srpms/SRPMS.pclos/libffi-3.2.1-2pclos2019.src.rpm
     https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
