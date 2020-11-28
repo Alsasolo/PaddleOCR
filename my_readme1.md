@@ -25,17 +25,32 @@
     https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
   
 ### 程序语句
-1. python ./PaddleOCR/tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer/" --rec_model_dir="./inference/ch_ppocr_mobile_v1.1_rec_infer/" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer/" --use_angle_cls=True --use_space_char=True --use_gpu=true
+1. python ./tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer/" --rec_model_dir="./inference/ch_ppocr_mobile_v1.1_rec_infer/" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer/" --use_angle_cls=True --use_space_char=True --use_gpu=true
  
 
 ERROR: Package 'imageio' requires a different Python: 2.7.12 not in '>=3.5'
 python3 -m pip install ./PaddleOCR/requirments.txt
 python -m pip install -r ./requirments.txt
 
-python ./tools/train.py -c "D:\PaddleOCR\configs\det\det_mv3_db_v1.1.yml"
-No module named 'cv2'
+ python ./tools/train.py -c "./configs/det/det_mv3_db_v1.1.yml"
+ No module named 'cv2'
+ No module named 'shapely'
+ 'D:\\PaddleOCR\\configs\\det\\det_db_icdar15_reader.yml'
+  No module named 'imgaug'
+  No such file or directory: './train_data/icdar2015/text_localization/test_icdar2015_label.txt'
+  
+  Cudnn error, CUDNN_STATUS_BAD_PARAM  at (/paddle/paddle/fluid/operators/batch_norm_op.cu:319)
+  [operator < batch_norm > error]
+  
+  TensorRT dynamic library (libnvinfer.so) that Paddle depends on is not configured correctly. (error code is libnvinfer.so: cannot open shared object file: No such file or directory)
+  Suggestions:
+  1. Check if TensorRT is installed correctly and its version is matched with paddlepaddle you installed.
+  2. Configure TensorRT dynamic library environment variables as follows:
+  - Linux: set LD_LIBRARY_PATH by `export LD_LIBRARY_PATH=...`
+
+
 
 /Projects/PaddleOCR
  python -V
  pip -V
- python -m pip -V install upgrade pip
+ python -m pip install upgrade pip
