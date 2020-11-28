@@ -25,11 +25,9 @@
     https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
   
 ### 程序语句
-1. python ./tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer/" --rec_model_dir="./inference/ch_ppocr_mobile_v1.1_rec_infer/" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer/" --use_angle_cls=True --use_space_char=True --use_gpu=true
+1. python ./tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="./inference/ch_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true false
  
-
 ERROR: Package 'imageio' requires a different Python: 2.7.12 not in '>=3.5'
-python3 -m pip install ./PaddleOCR/requirments.txt
 python -m pip install -r ./requirments.txt
 
  python ./tools/train.py -c "./configs/det/det_mv3_db_v1.1.yml"
@@ -38,6 +36,18 @@ python -m pip install -r ./requirments.txt
  'D:\\PaddleOCR\\configs\\det\\det_db_icdar15_reader.yml'
   No module named 'imgaug'
   No such file or directory: './train_data/icdar2015/text_localization/test_icdar2015_label.txt'
+  not find model file path ./inference/ch_ppocr_mobile_v1.1_det_infer//model
+  'D:\\PaddleOCR\\ppocr\\utils\\ppocr_keys_v1.txt'
+
+
+   cpu specific dynamic library is not loaded.
+(base) xiaocuiping@amax:~/Projects/PaddleOCR$
+
+  ExternalError:  Cudnn error, CUDNN_STATUS_BAD_PARAM  at (/paddle/paddle/fluid/operators/batch_norm_op.cu:198)
+  [operator < batch_norm > error]
+  export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBARAY_PATH
+  
+  : DeprecationWarning: Using           or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop worki
   
   Cudnn error, CUDNN_STATUS_BAD_PARAM  at (/paddle/paddle/fluid/operators/batch_norm_op.cu:319)
   [operator < batch_norm > error]
