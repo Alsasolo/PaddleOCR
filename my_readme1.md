@@ -28,14 +28,15 @@
    "/home/xiaocuiping/Projects/PaddleOCR/ppocr/utils/dict/korean_dict.txt"
 2. 需要进入conda环境
    conda activate base
-3.  
-
-    wget https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/srpms/SRPMS.pclos/libffi-3.2.1-2pclos2019.src.rpm
-    https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64ffi-devel-3.2.1-2pclos2019.x86_64.rpm
+   export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBARAY_PATH
+3. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/ger_2.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true 
   
+
+    
 ### 程序语句
-1. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/ger_1.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer/" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true 
- 
+1. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/ger_2.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true 
+ /home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer/model
+ "/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1/german_ppocr_mobile_v1.1_rec_infer/"
   "./doc/imgs/11.jpg""./doc/imgs_en""/home/xiaocuiping/Projects/PaddleOCR/img/in/"
   "/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/korean_ppocr_mobile_v1.1_rec_infer/korean_ppocr_mobile_v1.1_rec_infer/"
   "./inference/ch_ppocr_mobile_v1.1_rec_infer"
