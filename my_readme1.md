@@ -46,6 +46,10 @@
 ### 训练rec模型
 1. python gen_label.py --mode="rec" --input_path="{path/of/origin/label}" --output_label="rec_gt_label.txt"
 2. python3 tools/train.py -c configs/rec/rec_icdar15_train.yml
+3. # GPU训练 支持单卡，多卡训练，通过CUDA_VISIBLE_DEVICES指定卡号
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+ 执行改语句进行多卡训练会报错，执行export CUDA_VISIBLE_DEVICES=0后解决报错。
+   
 ### 程序语句
 1. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/korean_2.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/korean_ppocr_mobile_v1.1_rec_infer/korean_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true
 
