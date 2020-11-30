@@ -44,7 +44,7 @@
     "/home/xiaocuiping/Projects/PaddleOCR/output/inference/det_db/"
     python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/en_1.jpg" --det_model_dir="/home/xiaocuiping/Projects/PaddleOCR/output/inference/det_db" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true
 ### 训练rec模型
-1. 
+1. python gen_label.py --mode="rec" --input_path="{path/of/origin/label}" --output_label="rec_gt_label.txt"
 ### 程序语句
 1. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/korean_2.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/korean_ppocr_mobile_v1.1_rec_infer/korean_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true
 
