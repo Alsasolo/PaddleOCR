@@ -32,8 +32,11 @@
 3. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/ger_2.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true 
 ## 训练模型
  安照文件 https://github.com/PaddlePaddle/PaddleOCR/blob/develop/doc/doc_ch/detection.md ，训练det模型。
+ 安装文件 https://www.bookstack.cn/read/PaddleOCR/inference.md#b9ggm9 ，生成推理模型。
 1. python ./tools/train.py -c "./configs/det/det_mv3_db_v1.1.yml" 
    用的icdar2015数据集。
+2. 训练模型转inference模型。
+   python3 tools/export_model.py -c configs/det/det_mv3_db.yml -o Global.checkpoints=./ch_lite/det_mv3_db/best_accuracy Global.save_inference_dir=./inference/det_db/
 
     
 ### 程序语句
