@@ -34,6 +34,7 @@
 ## 训练模型
  安照文件 https://github.com/PaddlePaddle/PaddleOCR/blob/develop/doc/doc_ch/detection.md ，训练det模型。
  安装文件 https://www.bookstack.cn/read/PaddleOCR/inference.md#b9ggm9 ，生成推理模型。
+### 训练det模型
 1. python ./tools/train.py -c "./configs/det/det_mv3_db_v1.1.yml" 
    用的icdar2015数据集。
 2. 训练模型转inference模型。
@@ -42,6 +43,8 @@
    python tools/infer_det.py -c configs/det/det_mv3_db_v1.1.yml -o Global.infer_img="./doc/imgs_en/img_10.jpg" Global.checkpoints="./output/det_db/iter_epoch_1000"
     "/home/xiaocuiping/Projects/PaddleOCR/output/inference/det_db/"
     python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/en_1.jpg" --det_model_dir="/home/xiaocuiping/Projects/PaddleOCR/output/inference/det_db" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true
+### 训练rec模型
+1. 
 ### 程序语句
 1. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/korean_2.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/korean_ppocr_mobile_v1.1_rec_infer/korean_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true
 
