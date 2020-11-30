@@ -27,6 +27,7 @@
   "ch", 'japan', 'korean', 'french', 'german'
    "/home/xiaocuiping/Projects/PaddleOCR/ppocr/utils/dict/korean_dict.txt"
 2. 需要进入conda环境
+   cd ./Projects/PaddleOCR
    conda activate base
    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBARAY_PATH
 3. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/ger_2.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true 
@@ -36,11 +37,18 @@
 1. python ./tools/train.py -c "./configs/det/det_mv3_db_v1.1.yml" 
    用的icdar2015数据集。
 2. 训练模型转inference模型。
-   python3 tools/export_model.py -c configs/det/det_mv3_db.yml -o Global.checkpoints=./ch_lite/det_mv3_db/best_accuracy Global.save_inference_dir=./inference/det_db/
-
-    
+   python tools/export_model.py -c configs/det/det_mv3_db_v1.1.yml -o Global.checkpoints=./output/det_db/iter_epoch_1000 Global.save_inference_dir=./output/inference/det_db/
+3. 模型使用
+   python tools/infer_det.py -c configs/det/det_mv3_db_v1.1.yml -o Global.infer_img="./doc/imgs_en/img_10.jpg" Global.checkpoints="./output/det_db/iter_epoch_1000"
+    "/home/xiaocuiping/Projects/PaddleOCR/output/inference/det_db/"
+    python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/en_1.jpg" --det_model_dir="/home/xiaocuiping/Projects/PaddleOCR/output/inference/det_db" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true
 ### 程序语句
-1. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/ger_2.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true 
+1. python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/korean_2.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/korean_ppocr_mobile_v1.1_rec_infer/korean_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true
+
+python ./tools/infer/predict_system.py --image_dir="/home/xiaocuiping/Projects/PaddleOCR/img/in/korean_3.jpg" --det_model_dir="./inference/ch_ppocr_mobile_v1.1_det_infer" --rec_model_dir="/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/korean_ppocr_mobile_v1.1_rec_infer/korean_ppocr_mobile_v1.1_rec_infer" --cls_model_dir="./inference/ch_ppocr_mobile_v1.1_cls_infer" --use_angle_cls=True --use_space_char=True --use_gpu=true
+
+
+
  /home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1_rec_infer/german_ppocr_mobile_v1.1_rec_infer/model
  "/home/xiaocuiping/Projects/PaddleOCR/inference/kjgf/german_ppocr_mobile_v1.1/german_ppocr_mobile_v1.1_rec_infer/"
   "./doc/imgs/11.jpg""./doc/imgs_en""/home/xiaocuiping/Projects/PaddleOCR/img/in/"
@@ -81,7 +89,7 @@ python -m pip install -r ./requirments.txt
 
 
 
-/Projects/PaddleOCR
+cd ./Projects/PaddleOCR
  python -V
  pip -V
  python -m pip install upgrade pip
