@@ -46,7 +46,7 @@
 ### 训练rec模型
 1. python gen_label.py --mode="rec" --input_path="{path/of/origin/label}" --output_label="rec_gt_label.txt"
 2. python3 tools/train.py -c configs/rec/rec_icdar15_train.yml
-3. # GPU训练 支持单卡，多卡训练，通过CUDA_VISIBLE_DEVICES指定卡号
+3. GPU训练 支持单卡，多卡训练，通过CUDA_VISIBLE_DEVICES指定卡号
 export CUDA_VISIBLE_DEVICES=0,1,2,3
  执行改语句进行多卡训练会报错，执行export CUDA_VISIBLE_DEVICES=0后解决报错。
    
