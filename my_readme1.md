@@ -1,3 +1,22 @@
+# 制作open-set noise数据集
+## mini-ImageNet
+1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 服务器端部署paddleOCR
 本地运行paddleOCR，无法训练模型，服务器端使用gpu进行模型训练。
 ## 本地文件上传到远程服务器
