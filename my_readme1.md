@@ -1,6 +1,10 @@
 # 制作open-set noise数据集
+   cd ./Projects/mini
+   conda activate base
 ## mini-ImageNet
-1.
+1. 解压 unzip "/home/xiaocuiping/Projects/mini/mini-imagenet.zip"
+2. train，val，test图片按特定路径分类存放，https://blog.csdn.net/Smiler_/article/details/105227634?utm_medium=distribute.pc_relevant_download.none-task-blog-BlogCommendFromBaidu-4.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-BlogCommendFromBaidu-4.nonecas
+3. 修改ttv.py文件，获得想要的数据集。
 
 
 
