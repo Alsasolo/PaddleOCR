@@ -10,6 +10,8 @@
 1. 图片数 train 38401，test 12001，val 9601
 2. 类别数 train 64, test 20, val 16
    print(len(os.listdir(train_path)))可得到该文件下文件数，即类别数。
+3. 单类别文件数 test    
+
 
 
 
