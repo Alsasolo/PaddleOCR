@@ -7,10 +7,10 @@
 2. train，val，test图片按特定路径分类存放，https://blog.csdn.net/Smiler_/article/details/105227634?utm_medium=distribute.pc_relevant_download.none-task-blog-BlogCommendFromBaidu-4.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-BlogCommendFromBaidu-4.nonecas
 3. 修改ttv.py文件，获得想要的数据集。
 ### 具体转换
-1. 图片数 train 38401，test 12001，val 9601
+1. 图片数 train 38400，test 12000，val 9600
 2. 类别数 train 64, test 20, val 16
    print(len(os.listdir(train_path)))可得到该文件下文件数，即类别数。
-3. 单类别文件数 test    
+3. 单类别文件数600 per class    
 
 
 
